@@ -125,29 +125,29 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'sublabel_1',
 			[
-				'label' => esc_html__( 'Sub Label', 'textdomain' ),
+				'label' => esc_html__( 'Sub Label', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
-				'default' => esc_html__( 'Step 1', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your description here', 'textdomain' ),
+				'default' => esc_html__( 'Step 1', 'hz-widgets' ),
+				'placeholder' => esc_html__( 'Type your description here', 'hz-widgets' ),
 			]
 		);
 
 		$this->add_control(
 			'label_1',
 			[
-				'label' => esc_html__( 'Label', 'textdomain' ),
+				'label' => esc_html__( 'Label', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
-				'default' => esc_html__( 'Discovery Session', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your description here', 'textdomain' ),
+				'default' => esc_html__( 'Discovery Session', 'hz-widgets' ),
+				'placeholder' => esc_html__( 'Type your description here', 'hz-widgets' ),
 			]
 		);
 
 		$this->add_control(
 			'lottie_json_1',
 			[
-				'label' => esc_html__( 'Upload Lottie JSON', 'textdomain' ),
+				'label' => esc_html__( 'Upload Lottie JSON', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'media_types' => [ 'application/json' ],
 				'default' => [
@@ -159,7 +159,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'lottie_size_1',
 			[
-				'label' => esc_html__( 'Lottie Size', 'textdomain' ),
+				'label' => esc_html__( 'Lottie Size', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -180,47 +180,13 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		);
 
 		$this->add_control(
-			'lottie_top_1',
+			'lottie_margin_1',
 			[
-				'label' => esc_html__( 'Lottie Top Position', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 500,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
+				'label' => esc_html__( 'Lottie Margin', 'hz-widgets' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}} #nav-step1-tab .lottie_wpe' => 'top: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'lottie_left_1',
-			[
-				'label' => esc_html__( 'Lottie Left Position', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 500,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
-				'selectors' => [
-					'{{WRAPPER}} #nav-step1-tab .lottie_wpe' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} #nav-step1-tab .lottie_wpe' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -228,10 +194,10 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'lottie_loop_1',
 			[
-				'label' => esc_html__( 'Lottie Loop', 'textdomain' ),
+				'label' => esc_html__( 'Lottie Loop', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'True', 'textdomain' ),
-				'label_off' => esc_html__( 'False', 'textdomain' ),
+				'label_on' => esc_html__( 'True', 'hz-widgets' ),
+				'label_off' => esc_html__( 'False', 'hz-widgets' ),
 				'return_value' => 'true',
 				'default' => 'true',
 			]
@@ -242,7 +208,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'list_content_1',
 			[
-				'label' => esc_html__( 'Content', 'textdomain' ),
+				'label' => esc_html__( 'Content', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
 				'show_label' => false,
@@ -252,7 +218,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'image_content_1',
 			[
-				'label' => esc_html__( 'Image', 'textdomain' ),
+				'label' => esc_html__( 'Image', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -263,9 +229,9 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'button_title_1',
 			[
-				'label' => esc_html__( 'Button Text', 'textdomain' ),
+				'label' => esc_html__( 'Button Text', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Learn More' , 'textdomain' ),
+				'default' => esc_html__( 'Learn More' , 'hz-widgets' ),
 				'label_block' => true,
 			]
 		);
@@ -273,7 +239,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'button_link_1',
 			[
-				'label' => esc_html__( 'Button Link', 'textdomain' ),
+				'label' => esc_html__( 'Button Link', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
@@ -289,7 +255,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'list_1',
 			[
-				'label' => esc_html__( 'Work Process', 'textdomain' ),
+				'label' => esc_html__( 'Work Process', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
@@ -297,41 +263,41 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 						'list_content_1' => esc_html__( "Understanding Client Objectives:
 
 						Begin by actively listening to the client's goals, challenges, and expectations.
-						Encourage open communication to gain a comprehensive understanding of their needs and priorities.", 'textdomain' ),
+						Encourage open communication to gain a comprehensive understanding of their needs and priorities.", 'hz-widgets' ),
 						'image_content_1' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/initial-public-offering.svg',
 						],
-						'button_title_1' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_1' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_1' => esc_html__( "Assessing Current Situation:
 
 						Conduct a thorough evaluation of the client's current status, including their existing systems,
-						processes, and pain points. Identify any gaps or areas for improvement that need to be addressed.", 'textdomain' ),
+						processes, and pain points. Identify any gaps or areas for improvement that need to be addressed.", 'hz-widgets' ),
 						'image_content_1' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/assessing.svg',
 						],
-						'button_title_1' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_1' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_1' => esc_html__( "Clarifying Expectations:
 
 							Clearly outline the scope of the consultation and the expected outcomes.
-							Discuss timelines, deliverables, and any potential challenges or constraints.", 'textdomain' ),
+							Discuss timelines, deliverables, and any potential challenges or constraints.", 'hz-widgets' ),
 						'image_content_1' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/marketing.svg',
 						],
-						'button_title_1' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_1' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_1' => esc_html__( "Building Rapport and Trust:
 
 						Take the time to build rapport and establish trust with the client.
-						Demonstrate expertise, professionalism, and genuine interest in their success.", 'textdomain' ),
+						Demonstrate expertise, professionalism, and genuine interest in their success.", 'hz-widgets' ),
 						'image_content_1' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/trust.svg',
 						],
-						'button_title_1' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_1' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 				],
 				'title_field' => '{{{ list_content_1 }}}',
@@ -350,29 +316,29 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'sublabel_2',
 			[
-				'label' => esc_html__( 'Sub Label', 'textdomain' ),
+				'label' => esc_html__( 'Sub Label', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
-				'default' => esc_html__( 'Step 2', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your description here', 'textdomain' ),
+				'default' => esc_html__( 'Step 2', 'hz-widgets' ),
+				'placeholder' => esc_html__( 'Type your description here', 'hz-widgets' ),
 			]
 		);
 
 		$this->add_control(
 			'label_2',
 			[
-				'label' => esc_html__( 'Label', 'textdomain' ),
+				'label' => esc_html__( 'Label', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
-				'default' => esc_html__( 'Comprehensive Assessment', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your description here', 'textdomain' ),
+				'default' => esc_html__( 'Comprehensive Assessment', 'hz-widgets' ),
+				'placeholder' => esc_html__( 'Type your description here', 'hz-widgets' ),
 			]
 		);
 
 		$this->add_control(
 			'lottie_json_2',
 			[
-				'label' => esc_html__( 'Upload Lottie JSON', 'textdomain' ),
+				'label' => esc_html__( 'Upload Lottie JSON', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'media_types' => [ 'application/json' ],
 				'default' => [
@@ -384,7 +350,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'lottie_size_2',
 			[
-				'label' => esc_html__( 'Lottie Size', 'textdomain' ),
+				'label' => esc_html__( 'Lottie Size', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -405,47 +371,13 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		);
 
 		$this->add_control(
-			'lottie_top_2',
+			'lottie_margin_2',
 			[
-				'label' => esc_html__( 'Lottie Top Position', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 500,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
+				'label' => esc_html__( 'Lottie Margin', 'hz-widgets' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}} #nav-step2-tab .lottie_wpe' => 'top: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'lottie_left_2',
-			[
-				'label' => esc_html__( 'Lottie Left Position', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 500,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
-				'selectors' => [
-					'{{WRAPPER}} #nav-step2-tab .lottie_wpe' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} #nav-step2-tab .lottie_wpe' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -453,10 +385,10 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'lottie_loop_2',
 			[
-				'label' => esc_html__( 'Lottie Loop', 'textdomain' ),
+				'label' => esc_html__( 'Lottie Loop', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'True', 'textdomain' ),
-				'label_off' => esc_html__( 'False', 'textdomain' ),
+				'label_on' => esc_html__( 'True', 'hz-widgets' ),
+				'label_off' => esc_html__( 'False', 'hz-widgets' ),
 				'return_value' => 'true',
 				'default' => 'true',
 			]
@@ -468,7 +400,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'list_content_2',
 			[
-				'label' => esc_html__( 'Content', 'textdomain' ),
+				'label' => esc_html__( 'Content', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
 				'show_label' => false,
@@ -478,7 +410,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'image_content_2',
 			[
-				'label' => esc_html__( 'Image', 'textdomain' ),
+				'label' => esc_html__( 'Image', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -489,9 +421,9 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'button_title_2',
 			[
-				'label' => esc_html__( 'Button Text', 'textdomain' ),
+				'label' => esc_html__( 'Button Text', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Learn More' , 'textdomain' ),
+				'default' => esc_html__( 'Learn More' , 'hz-widgets' ),
 				'label_block' => true,
 			]
 		);
@@ -499,7 +431,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'button_link_2',
 			[
-				'label' => esc_html__( 'Button Link', 'textdomain' ),
+				'label' => esc_html__( 'Button Link', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
@@ -515,7 +447,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'list_2',
 			[
-				'label' => esc_html__( 'Work Process', 'textdomain' ),
+				'label' => esc_html__( 'Work Process', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
@@ -524,11 +456,11 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 
 						Gather data from various sources, including customer interactions, market research, and internal
 						processes.
-						Analyze the collected data to identify patterns, trends, and areas for improvement.", 'textdomain' ),
+						Analyze the collected data to identify patterns, trends, and areas for improvement.", 'hz-widgets' ),
 						'image_content_2' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/data-collection.svg',
 						],
-						'button_title_2' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_2' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_2' => esc_html__( "Stakeholder Consultation:
@@ -536,11 +468,11 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 						Engage with key stakeholders, including clients, employees, and partners, to gather their
 						perspectives and feedback.
 						Conduct interviews, surveys, and focus groups to gain a comprehensive understanding of stakeholder
-						needs, expectations, and concerns.", 'textdomain' ),
+						needs, expectations, and concerns.", 'hz-widgets' ),
 						'image_content_2' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/stakeholder-1.svg',
 						],
-						'button_title_2' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_2' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_2' => esc_html__( "Gap Analysis:
@@ -548,22 +480,22 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 						Compare the findings from data analysis and stakeholder consultation against predefined benchmarks,
 						industry standards, and best practices.
 						Identify gaps, discrepancies, and areas of alignment between current performance and desired
-						outcomes.", 'textdomain' ),
+						outcomes.", 'hz-widgets' ),
 						'image_content_2' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/gap.svg',
 						],
-						'button_title_2' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_2' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_2' => esc_html__( "Recommendations and Action Planning:
 
 						Based on the assessment findings, develop actionable recommendations and strategies for improvement.
 						Prioritize recommendations based on their potential impact, feasibility, and alignment with
-						organizational goals.", 'textdomain' ),
+						organizational goals.", 'hz-widgets' ),
 						'image_content_2' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/recommendations.svg',
 						],
-						'button_title_2' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_2' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 				],
 				'title_field' => '{{{ list_content_2 }}}',
@@ -582,29 +514,29 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'sublabel_3',
 			[
-				'label' => esc_html__( 'Sub Label', 'textdomain' ),
+				'label' => esc_html__( 'Sub Label', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
-				'default' => esc_html__( 'Step 3', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your description here', 'textdomain' ),
+				'default' => esc_html__( 'Step 3', 'hz-widgets' ),
+				'placeholder' => esc_html__( 'Type your description here', 'hz-widgets' ),
 			]
 		);
 
 		$this->add_control(
 			'label_3',
 			[
-				'label' => esc_html__( 'Label', 'textdomain' ),
+				'label' => esc_html__( 'Label', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
-				'default' => esc_html__( 'Comprehensive Assessment', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your description here', 'textdomain' ),
+				'default' => esc_html__( 'Comprehensive Assessment', 'hz-widgets' ),
+				'placeholder' => esc_html__( 'Type your description here', 'hz-widgets' ),
 			]
 		);
 
 		$this->add_control(
 			'lottie_json_3',
 			[
-				'label' => esc_html__( 'Upload Lottie JSON', 'textdomain' ),
+				'label' => esc_html__( 'Upload Lottie JSON', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'media_types' => [ 'application/json' ],
 				'default' => [
@@ -616,7 +548,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'lottie_size_3',
 			[
-				'label' => esc_html__( 'Lottie Size', 'textdomain' ),
+				'label' => esc_html__( 'Lottie Size', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -637,47 +569,13 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		);
 
 		$this->add_control(
-			'lottie_top_3',
+			'lottie_margin_3',
 			[
-				'label' => esc_html__( 'Lottie Top Position', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 500,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
+				'label' => esc_html__( 'Lottie Margin', 'hz-widgets' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}} #nav-step3-tab .lottie_wpe' => 'top: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'lottie_left_3',
-			[
-				'label' => esc_html__( 'Lottie Left Position', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 500,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
-				'selectors' => [
-					'{{WRAPPER}} #nav-step3-tab .lottie_wpe' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} #nav-step3-tab .lottie_wpe' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -685,10 +583,10 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'lottie_loop_3',
 			[
-				'label' => esc_html__( 'Lottie Loop', 'textdomain' ),
+				'label' => esc_html__( 'Lottie Loop', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'True', 'textdomain' ),
-				'label_off' => esc_html__( 'False', 'textdomain' ),
+				'label_on' => esc_html__( 'True', 'hz-widgets' ),
+				'label_off' => esc_html__( 'False', 'hz-widgets' ),
 				'return_value' => 'true',
 				'default' => 'true',
 			]
@@ -699,7 +597,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'list_content_3',
 			[
-				'label' => esc_html__( 'Content', 'textdomain' ),
+				'label' => esc_html__( 'Content', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
 				'show_label' => false,
@@ -709,7 +607,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'image_content_3',
 			[
-				'label' => esc_html__( 'Image', 'textdomain' ),
+				'label' => esc_html__( 'Image', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -720,9 +618,9 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'button_title_3',
 			[
-				'label' => esc_html__( 'Button Text', 'textdomain' ),
+				'label' => esc_html__( 'Button Text', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Learn More' , 'textdomain' ),
+				'default' => esc_html__( 'Learn More' , 'hz-widgets' ),
 				'label_block' => true,
 			]
 		);
@@ -730,7 +628,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'button_link_3',
 			[
-				'label' => esc_html__( 'Button Link', 'textdomain' ),
+				'label' => esc_html__( 'Button Link', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
@@ -746,7 +644,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'list_3',
 			[
-				'label' => esc_html__( 'Work Process', 'textdomain' ),
+				'label' => esc_html__( 'Work Process', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
@@ -755,11 +653,11 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 
 						Begin by engaging in thorough discussions with the client to understand their business objectives,
 						challenges, and aspirations.
-						Actively listen to their input and gather insights into their short-term and long-term goals.", 'textdomain' ),
+						Actively listen to their input and gather insights into their short-term and long-term goals.", 'hz-widgets' ),
 						'image_content_3' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/interview-1.svg',
 						],
-						'button_title_3' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_3' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_3' => esc_html__( "Objective Definition:
@@ -767,11 +665,11 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 						Work closely with the client to articulate clear and specific objectives that are achievable and
 						measurable.
 						Define key performance indicators (KPIs) that will be used to evaluate progress and success.
-						Establish realistic timelines and milestones to track progress towards the goals.", 'textdomain' ),
+						Establish realistic timelines and milestones to track progress towards the goals.", 'hz-widgets' ),
 						'image_content_3' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/objective.svg',
 						],
-						'button_title_3' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_3' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_3' => esc_html__( "Alignment with IT Requirements:
@@ -779,22 +677,22 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 						Assess the client's IT infrastructure, systems, and requirements to ensure that goals are achievable
 						within the existing technological framework.
 						Identify any gaps or challenges that may impact the attainment of goals and develop strategies to
-						address them.", 'textdomain' ),
+						address them.", 'hz-widgets' ),
 						'image_content_3' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/alignment.svg',
 						],
-						'button_title_3' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_3' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_3' => esc_html__( "Continuous Monitoring and Adaptation:
 
 						Implement mechanisms for ongoing monitoring and evaluation of progress towards goals.
 						Regularly review performance against established KPIs and milestones, and make adjustments as needed
-						to stay on track.", 'textdomain' ),
+						to stay on track.", 'hz-widgets' ),
 						'image_content_3' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/monitoring.svg',
 						],
-						'button_title_3' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_3' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 				],
 				'title_field' => '{{{ list_content_3 }}}',
@@ -813,29 +711,29 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'sublabel_4',
 			[
-				'label' => esc_html__( 'Sub Label', 'textdomain' ),
+				'label' => esc_html__( 'Sub Label', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
-				'default' => esc_html__( 'Step 4', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your description here', 'textdomain' ),
+				'default' => esc_html__( 'Step 4', 'hz-widgets' ),
+				'placeholder' => esc_html__( 'Type your description here', 'hz-widgets' ),
 			]
 		);
 
 		$this->add_control(
 			'label_4',
 			[
-				'label' => esc_html__( 'Label', 'textdomain' ),
+				'label' => esc_html__( 'Label', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
-				'default' => esc_html__( 'Strategic Planning', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your description here', 'textdomain' ),
+				'default' => esc_html__( 'Strategic Planning', 'hz-widgets' ),
+				'placeholder' => esc_html__( 'Type your description here', 'hz-widgets' ),
 			]
 		);
 
 		$this->add_control(
 			'lottie_json_4',
 			[
-				'label' => esc_html__( 'Upload Lottie JSON', 'textdomain' ),
+				'label' => esc_html__( 'Upload Lottie JSON', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'media_types' => [ 'application/json' ],
 				'default' => [
@@ -847,7 +745,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'lottie_size_4',
 			[
-				'label' => esc_html__( 'Lottie Size', 'textdomain' ),
+				'label' => esc_html__( 'Lottie Size', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -868,47 +766,13 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		);
 
 		$this->add_control(
-			'lottie_top_4',
+			'lottie_margin_4',
 			[
-				'label' => esc_html__( 'Lottie Top Position', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 500,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
+				'label' => esc_html__( 'Lottie Margin', 'hz-widgets' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}} #nav-step4-tab .lottie_wpe' => 'top: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'lottie_left_4',
-			[
-				'label' => esc_html__( 'Lottie Left Position', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 500,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
-				'selectors' => [
-					'{{WRAPPER}} #nav-step4-tab .lottie_wpe' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} #nav-step4-tab .lottie_wpe' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -916,10 +780,10 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'lottie_loop_4',
 			[
-				'label' => esc_html__( 'Lottie Loop', 'textdomain' ),
+				'label' => esc_html__( 'Lottie Loop', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'True', 'textdomain' ),
-				'label_off' => esc_html__( 'False', 'textdomain' ),
+				'label_on' => esc_html__( 'True', 'hz-widgets' ),
+				'label_off' => esc_html__( 'False', 'hz-widgets' ),
 				'return_value' => 'true',
 				'default' => 'true',
 			]
@@ -930,7 +794,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'list_content_4',
 			[
-				'label' => esc_html__( 'Content', 'textdomain' ),
+				'label' => esc_html__( 'Content', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 4,
 				'show_label' => false,
@@ -940,7 +804,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'image_content_4',
 			[
-				'label' => esc_html__( 'Image', 'textdomain' ),
+				'label' => esc_html__( 'Image', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -951,9 +815,9 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'button_title_4',
 			[
-				'label' => esc_html__( 'Button Text', 'textdomain' ),
+				'label' => esc_html__( 'Button Text', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Learn More' , 'textdomain' ),
+				'default' => esc_html__( 'Learn More' , 'hz-widgets' ),
 				'label_block' => true,
 			]
 		);
@@ -961,7 +825,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'button_link_4',
 			[
-				'label' => esc_html__( 'Button Link', 'textdomain' ),
+				'label' => esc_html__( 'Button Link', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
@@ -977,7 +841,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'list_4',
 			[
-				'label' => esc_html__( 'Work Process', 'textdomain' ),
+				'label' => esc_html__( 'Work Process', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
@@ -987,11 +851,11 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 						Begin by clearly defining your organization's goals and objectives, taking into account both
 						short-term and long-term targets.
 						Conduct a thorough analysis of internal and external factors that may impact the achievement of
-						these goals, such as market trends, competitor activities, and regulatory changes.", 'textdomain' ),
+						these goals, such as market trends, competitor activities, and regulatory changes.", 'hz-widgets' ),
 						'image_content_4' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/goal-setting-1.svg',
 						],
-						'button_title_4' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_4' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_4' => esc_html__( "Developing Strategies and Action Plans:
@@ -999,11 +863,11 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 						Based on the goals and analysis, develop strategic initiatives and action plans that outline how you
 						will achieve your objectives.
 						Define key strategies, such as market expansion, product development, or cost optimization, and
-						identify specific actions and timelines for implementation.", 'textdomain' ),
+						identify specific actions and timelines for implementation.", 'hz-widgets' ),
 						'image_content_4' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/personalized-2.svg',
 						],
-						'button_title_4' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_4' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_4' => esc_html__( "Resource Allocation and Implementation:
@@ -1011,11 +875,11 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 						Allocate resources, including budget, personnel, and technology, to support the execution of your
 						strategic initiatives.
 						Establish clear accountability and responsibility for each action item, and monitor progress closely
-						to ensure timely and effective implementation.", 'textdomain' ),
+						to ensure timely and effective implementation.", 'hz-widgets' ),
 						'image_content_4' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/resource-allocation.svg',
 						],
-						'button_title_4' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_4' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 					[
 						'list_content_4' => esc_html__( "Monitoring and Evaluation:
@@ -1023,11 +887,11 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 						Continuously monitor and evaluate the progress of your strategic initiatives against predefined
 						metrics and benchmarks.
 						Regularly review performance, identify any deviations from the plan, and make adjustments as
-						necessary to stay on track and achieve your organizational goals.", 'textdomain' ),
+						necessary to stay on track and achieve your organizational goals.", 'hz-widgets' ),
 						'image_content_4' => [
 							'url' => WPA_PLUGIN_ASSETS_FILE . 'images/monitoring.svg',
 						],
-						'button_title_4' => esc_html__( 'Learn More', 'textdomain' )
+						'button_title_4' => esc_html__( 'Learn More', 'hz-widgets' )
 					],
 				],
 				'title_field' => '{{{ list_content_4 }}}',
@@ -1039,7 +903,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'tab_buttons',
 			[
-				'label' => esc_html__( 'Tab Buttons', 'textdomain' ),
+				'label' => esc_html__( 'Tab Buttons', 'hz-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -1047,7 +911,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			[
-				'label' => esc_html__( 'Sub Label', 'textdomain' ),
+				'label' => esc_html__( 'Sub Label', 'hz-widgets' ),
 				'name' => 'sublabel_typography',
 				'selector' => '{{WRAPPER}} .process-tabs .nav-link .step-title',
 			]
@@ -1056,7 +920,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			[
-				'label' => esc_html__( 'Label', 'textdomain' ),
+				'label' => esc_html__( 'Label', 'hz-widgets' ),
 				'name' => 'label_typography',
 				'selector' => '{{WRAPPER}} .process-tabs .nav-link',
 			]
@@ -1073,7 +937,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'borderradius',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
@@ -1085,7 +949,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'padding',
 			[
-				'label' => esc_html__( 'Padding', 'textdomain' ),
+				'label' => esc_html__( 'Padding', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
@@ -1099,7 +963,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'tab_content',
 			[
-				'label' => esc_html__( 'Tab Content', 'textdomain' ),
+				'label' => esc_html__( 'Tab Content', 'hz-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -1107,7 +971,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'content_icon',
 			[
-				'label' => esc_html__( 'Icon Size', 'textdomain' ),
+				'label' => esc_html__( 'Icon Size', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -1130,7 +994,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			[
-				'label' => esc_html__( 'Description', 'textdomain' ),
+				'label' => esc_html__( 'Description', 'hz-widgets' ),
 				'name' => 'content_content_typography',
 				'selector' => '{{WRAPPER}} .process-card_text',
 			]
@@ -1139,7 +1003,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			[
-				'label' => esc_html__( 'Link', 'textdomain' ),
+				'label' => esc_html__( 'Link', 'hz-widgets' ),
 				'name' => 'content_content_typography',
 				'selector' => '{{WRAPPER}} .process-card .line-btn',
 			]
@@ -1156,7 +1020,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'content_borderradius',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
@@ -1168,7 +1032,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		$this->add_control(
 			'content_padding',
 			[
-				'label' => esc_html__( 'Padding', 'textdomain' ),
+				'label' => esc_html__( 'Padding', 'hz-widgets' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
@@ -1196,11 +1060,11 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 		<style>
 			.lottie_wpe{
 				height: 150px;
-				position: absolute;
+				/* position: absolute;
 				left: 0;
 				right: 0;
 				top: 0px;
-				bottom: 0;
+				bottom: 0; */
 			}
 
 			.process-tabs button span{
@@ -1215,6 +1079,9 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 			<div class="nav nav-tabs process-tabs" id="nav-tab" role="tablist">
 				<button class="nav-link active"
 					id="nav-step1-tab" data-bs-toggle="tab" data-bs-target="#nav-step1" type="button">
+					<span
+						class="step-title"><?php echo $settings['sublabel_1']; ?>
+					</span>
 					<?php if(!empty($settings['lottie_json_1']['url'])) : ?>
 					<dotlottie-player
 					autoplay
@@ -1225,9 +1092,6 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 					>
 					</dotlottie-player>
 					<?php endif; ?>
-					<span
-						class="step-title"><?php echo $settings['sublabel_1']; ?>
-					</span>
 					<span>
 						<?php echo $settings['label_1']; ?>
 					</span>
@@ -1237,6 +1101,9 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 				</button>
 				<button class="nav-link"
 					id="nav-step2-tab" data-bs-toggle="tab" data-bs-target="#nav-step2" type="button">
+					<span
+						class="step-title"><?php echo $settings['sublabel_2']; ?>
+					</span>
 					<?php if(!empty($settings['lottie_json_2']['url'])) : ?>
 					<dotlottie-player
 					autoplay
@@ -1247,13 +1114,15 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 					>
 					</dotlottie-player>
 					<?php endif; ?>
-					<span
-						class="step-title"><?php echo $settings['sublabel_2']; ?></span><span>
+					<span>
 						<?php echo $settings['label_2']; ?>
 					</span><span class="process-icon"><i
 							class="fa-light fa-angles-right fa-fw"></i></span></button>
 				<button class="nav-link"
 					id="nav-step3-tab" data-bs-toggle="tab" data-bs-target="#nav-step3" type="button">
+					<span
+						class="step-title"><?php echo $settings['sublabel_3']; ?>
+					</span>
 					<?php if(!empty($settings['lottie_json_3']['url'])) : ?>
 					<dotlottie-player
 					autoplay
@@ -1264,13 +1133,15 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 					>
 					</dotlottie-player>
 					<?php endif; ?>
-					<span
-						class="step-title"><?php echo $settings['sublabel_3']; ?></span><span>
+					<span>
 						<?php echo $settings['label_3']; ?>
 					</span><span class="process-icon"><i
 							class="fa-light fa-angles-right fa-fw"></i></span></button>
 				<button class="nav-link"
 					id="nav-step4-tab" data-bs-toggle="tab" data-bs-target="#nav-step4" type="button">
+					<span
+						class="step-title"><?php echo $settings['sublabel_4']; ?>
+					</span>
 					<?php if(!empty($settings['lottie_json_4']['url'])) : ?>
 					<dotlottie-player
 					autoplay
@@ -1281,8 +1152,7 @@ class hz_Wpe_Cards extends \Elementor\Widget_Base {
 					>
 					</dotlottie-player>
 					<?php endif; ?>
-					<span
-						class="step-title"><?php echo $settings['sublabel_4']; ?></span><span>
+					<span>
 						<?php echo $settings['label_4']; ?>
 					</span></button>
 			</div>
